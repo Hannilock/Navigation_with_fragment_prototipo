@@ -33,7 +33,6 @@ public class FakeData {
                 urls.add("http://www.litoralmania.com.br/wp-content/uploads/2018/03/O-caminho-percorrido-por-Jesus.jpg");
                 urls.add("http://www.osorio.rs.gov.br/uploads/pontoturistico/15408/maior_2.jpg");
                 urls.add("https://caminhosdalu.files.wordpress.com/2010/03/cimg0439.jpg");
-                urls.add("http://www.litoralmania.com.br/wp-content/uploads/2015/06/11329932_988436341190752_8783382531801142755_n.jpg");
                 break;
             case "1":
                 // toolbar.setTitle(this.getString(R.string.lodging_label));

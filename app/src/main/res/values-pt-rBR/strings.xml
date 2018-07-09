@@ -36,4 +36,48 @@
     <string name="log_toast">Você está logado!</string>
     <string name="dev_toast">Em desenvolvimento</string>
     <string name="about_label">Conheça a cidade</string>
+    <string-array name="tour_list">
+        <item>praias</item>
+        <item>lagoas</item>
+        <item>observatórios</item>
+        <item>cachoeiras</item>
+        <item>cultura</item>
+        <item>parques</item>
+        <item>usinas de vento</item>
+    </string-array>
+    <string-array name="lodge_list">
+        <item>hoteis</item>
+        <item>pousadas</item>
+        <item>albergues</item>
+        <item>moteis</item>
+        <item>campings</item>
+    </string-array>
+    <string-array name="eat_list">
+        <item>restaurantes</item>
+        <item>pubs</item>
+        <item>cafés coloniais</item>
+        <item>comida caseira</item>
+        <item>Pizzarias</item>
+        <item>lancherias</item>
+        <item>Churrascarias</item>
+        <item>Buffets à kilo</item>
+    </string-array>
+    <string-array name="services_list">
+        <item>Segurança</item>
+        <item>Saúde</item>
+        <item>Transporte</item>
+    </string-array>
+    <string-array name="menu_Items">
+        <item>Idiomas</item>
+        <item>Histórico</item>
+        <item>Favoritos</item>
+        <item>Editar informações</item>
+        <item>Enviar Feedback</item>
+        <item>Creditos</item>
+    </string-array>
+    <string-array name="languages_list">
+        <item>Inglês</item>
+        <item>Português</item>
+        <item>Espanhol</item>
+    </string-array>
 </resources>
