@@ -3,6 +3,7 @@ package com.example.dc.navigation.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.dc.navigation.R;
 import com.example.dc.navigation.models.Contact;
@@ -31,12 +33,41 @@ public class FragmentMain extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_test_two, container, false);
-        setButtons(view);
         return view;
     }
 
-    private void setButtons(View view){
-        eventsBanner = (ImageButton) view.findViewById(R.id.events_but);
+    public void onClickButtons(View view){
+        Fragment fragment = null;
+        Class fragmentClass = null;
+
+        switch (view.getId()){
+            case R.id.wheredo_but:
+                fragmentClass = FragmentWhaToDo.class;
+                break;
+            case R.id.accom_but:
+                fragmentClass = FragmentAccommodation.class;
+                break;
+            case R.id.eat_but:
+                fragmentClass = FragmentWhereToEat.class;
+                break;
+            case R.id.services_but:
+                fragmentClass = FragmentPublicService.class;
+                break;
+            case R.id.events_but:
+                Toast.makeText(getContext(), "In development", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (fragment != null) {
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            ft.replace(R.id.main_content_fragment, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
     }
 
 //    private void setBanners(View view){
