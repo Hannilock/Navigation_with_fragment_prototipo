@@ -1,0 +1,72 @@
+package com.example.dc.navigation.adapters;
+
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.dc.navigation.activities.InfoActivity;
+import com.example.dc.navigation.R;
+import com.example.dc.navigation.models.Place;
+
+import java.util.List;
+
+
+
+/**
+ * Created by Vih on 10/05/2018.
+ */
+
+public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.myHolder>{
+    private List<Place> places;
+    private Context context;
+
+    public PlacesAdapter(List<Place> places, Context c) {
+        this.places = places;
+        this.context = c;
+    }
+
+    @Override
+    public PlacesAdapter.myHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_recycler_places, parent, false);
+        PlacesAdapter.myHolder holder = new PlacesAdapter.myHolder(v);
+
+        return holder;
+    }
+
+    @Override
+    public void onBindViewHolder(myHolder holder, int position) {
+        holder.title.setText(places.get(position).getTitle());
+        holder.subtitle.setText(places.get(position).getSubtitle());
+        holder.img.setImageResource(places.get(position).getImage());
+    }
+
+    @Override
+    public int getItemCount() {
+        return places.size();
+    }
+
+    class myHolder extends RecyclerView.ViewHolder{
+        TextView title, subtitle;
+        ImageView img;
+
+        public myHolder(View itemView) {
+            super(itemView);
+            title = (TextView) itemView.findViewById(R.id.title_label);
+            subtitle = (TextView) itemView.findViewById(R.id.sub_label);
+            img = (ImageView) itemView.findViewById(R.id.image_view);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.startActivity(new Intent(context, InfoActivity.class));
+
+                }
+            });
+        }
+    }
+}

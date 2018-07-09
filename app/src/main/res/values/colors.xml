@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#14717e</color>
+    <color name="colorPrimaryDark">#58999f</color>
+    <color name="colorAccent">#DCB13C</color>
+    <color name="menuBackgroundColor">#efd9ce</color>
+    <color name="semi_transparent_screen">#CC222222</color>
+    <color name="lesser_white">#dfdfdf</color>
+    <color name="pure_white">#ffffff</color>
+    <color name="lesser_grey">#50222222</color>
+</resources>

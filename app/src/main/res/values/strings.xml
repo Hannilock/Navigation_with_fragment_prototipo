@@ -1,0 +1,94 @@
+<resources>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_name">Pref Prototype</string>
+    <string name="not_found_label">Page not found :C</string>
+    <string name="not_found_desc">The page you want is not yet ready to launch. Sorry.</string>
+    <string name="conf_tag">Settings</string>
+    <string name="home_label">Home</string>
+    <string name="tour_label">What to do</string>
+    <string name="lodging_label">Lodging</string>
+    <string name="eat_label">Where to Eat</string>
+    <string name="services_label">Public Services</string>
+    <string name="log_label">Log In</string>
+    <string name="splash_title">City Hall App</string>
+    <string name="splash_sub">Debug version 0.0.25</string>
+    <string-array name="tour_list">
+        <item>beaches</item>
+        <item>ponds</item>
+        <item>observatories</item>
+        <item>waterfalls</item>
+        <item>culture</item>
+        <item>parks</item>
+        <item>wind farms</item>
+        <item>events</item>
+    </string-array>
+    <string-array name="lodge_list">
+        <item>hotels</item>
+        <item>pousadas</item>
+        <item>albergues</item>
+        <item>motels</item>
+        <item>campings</item>
+    </string-array>
+    <string-array name="eat_list">
+        <item>restaurants</item>
+        <item>pubs</item>
+        <item>colonial cafes</item>
+        <item>homemade cooking</item>
+        <item>Pizzerias</item>
+        <item>Snacks</item>
+        <item>Churrascarias</item>
+        <item>Buffets</item>
+    </string-array>
+    <string-array name="services_list">
+        <item>Security</item>
+        <item>Health</item>
+        <item>Transport</item>
+    </string-array>
+    <string name="search_bar_label">Search...</string>
+    <string name="month_label">June</string>
+    <string name="places_label">Hottest Places</string>
+    <string name="events_label">Hottest Events</string>
+    <string name="bottom_main_label">Licensed by Osório City Hall</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="header_title">Anonymous</string>
+    <string name="header_subtitle">Log in to gain access to establishment? edition</string>
+    <string name="conf_log_title">Owner of an establishment?</string>
+    <string name="conf_log_subtitle">Log in or request a new app account to edit your store\'s info!</string>
+    <string name="reg_but">Register</string>
+    <string-array name="menu_Items">
+        <item>Languages</item>
+        <item>History</item>
+        <item>Favourites</item>
+        <item>Edit Info</item>
+        <item>Send Feedback</item>
+        <item>Credits</item>
+    </string-array>
+    <string-array name="languages_list">
+        <item>English</item>
+        <item>Portuguese</item>
+        <item>Spanish</item>
+    </string-array>
+    <string name="feedback_title" translatable="false">Feedback</string>
+    <string name="feedback_rad_name">My name</string>
+    <string name="feedback_rad_nony">Anonymous</string>
+    <string name="feedback_name_label">Name:</string>
+    <string name="feedback_desc_label">Description:</string>
+    <string name="send_label">send</string>
+    <string name="feedback_toast">Your feedback was sent successfully!</string>
+    <string name="log_title" translatable="false">Login</string>
+    <string name="log_email" translatable="false">Email: </string>
+    <string name="log_password">Password: </string>
+    <string name="log_toast">You\'re logged in!</string>
+    <string name="dev_toast">In development...</string>
+    <string name="about_label">Meet the city</string>
+</resources>

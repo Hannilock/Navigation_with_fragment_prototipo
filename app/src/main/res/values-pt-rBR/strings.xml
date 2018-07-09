@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Protótipo de Turismo</string>
+    <string name="action_settings">Configurações</string>
+    <string name="hello_blank_fragment">Olá, fragmento vazio</string>
+    <string name="not_found_label">Página não encontrada :c</string>
+    <string name="not_found_desc">A página que você deseja não está disponivel no momento. Desculpe.</string>
+    <string name="conf_tag">Configurações</string>
+    <string name="home_label">Home</string>
+    <string name="tour_label">O que fazer</string>
+    <string name="lodging_label">Acomodações</string>
+    <string name="eat_label">Onde comer</string>
+    <string name="services_label">Serviços Públicos</string>
+    <string name="log_label">Login</string>
+    <string name="splash_title">Aplicativo da Prefeitura</string>
+    <string name="splash_sub">Versão de debug 0.0.25</string>
+    <string name="search_bar_label">Pesquisar...</string>
+    <string name="month_label">Junho</string>
+    <string name="places_label">Lugares em Alta</string>
+    <string name="events_label">Eventos em Alta</string>
+    <string name="bottom_main_label">Licenciado pela prefeitura de Osório</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+    <string name="header_title">Anônimo</string>
+    <string name="header_subtitle">Logue-se para ganhar acesso a versão de estabelecimento</string>
+    <string name="conf_log_title">Dono de um estabelecimento?</string>
+    <string name="conf_log_subtitle">Logue-se ou solicite uma nova conta no aplicativo para editar suas informações!</string>
+    <string name="reg_but">Registre-se</string>
+    <string name="feedback_rad_name">Meu nome</string>
+    <string name="feedback_rad_nony">Anônimo</string>
+    <string name="feedback_name_label">Nome:</string>
+    <string name="feedback_desc_label">Descrição:</string>
+    <string name="send_label">enviar</string>
+    <string name="feedback_toast">Seu feedback foi enviado com sucesso!</string>
+    <string name="log_password">Senha:</string>
+    <string name="log_toast">Você está logado!</string>
+    <string name="dev_toast">Em desenvolvimento</string>
+    <string name="about_label">Conheça a cidade</string>
+</resources>
