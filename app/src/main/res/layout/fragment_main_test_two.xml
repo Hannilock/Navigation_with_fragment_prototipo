@@ -31,42 +31,45 @@
             android:layout_marginBottom="2dp">
 
             <ImageButton
-                android:id="@+id/wheredo_but"
+                android:id="@+id/whatdo_but"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:background="@color/colorAccent"
-                android:src="@drawable/windturbineic"
-                android:layout_marginRight="1dp"/>
+                android:src="@drawable/windturbineic" />
+
             <ImageButton
                 android:id="@+id/eat_but"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
                 android:layout_weight="1"
                 android:background="@color/colorAccent"
-                android:src="@drawable/eatic"
-                android:layout_marginLeft="1dp"/>
+                android:src="@drawable/eatic" />
         </TableRow>
         <TableRow
             android:layout_weight="1.1"
             android:weightSum="2">
+
             <ImageButton
                 android:id="@+id/accom_but"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/bedic"
                 android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
 
-                android:background="@color/colorPrimaryDark"/>
+                android:src="@drawable/bedic" />
+
             <ImageButton
                 android:id="@+id/services_but"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/hospitalic"
                 android:layout_marginLeft="1dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:src="@drawable/hospitalic" />
         </TableRow>
     </TableLayout>
 </android.support.v4.widget.DrawerLayout>

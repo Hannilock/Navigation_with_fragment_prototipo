@@ -3,6 +3,7 @@ package com.example.dc.navigation.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.dc.navigation.R;
 import com.example.dc.navigation.models.Contact;
@@ -25,18 +27,72 @@ import cn.bingoogolapple.bgabanner.BGABanner;
 public class FragmentMain extends Fragment {
 //    private BGABanner placesBanner, eventsBanner;
 //    ArrayList<String> places_imgs, places_names, events_imgs, events_names;
-    ImageButton eventsBanner;
+    private ImageButton eventsButr, whatDoBut,accomBut, eatBut, servicesBut;
+    private Fragment fragment = null;
+    private Class fragmentClass = null;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_test_two, container, false);
-        setButtons(view);
+
+        eventsButr = (ImageButton) view.findViewById(R.id.events_but);
+        whatDoBut = (ImageButton) view.findViewById(R.id.whatdo_but);
+        accomBut = (ImageButton) view.findViewById(R.id.accom_but);
+        eatBut = (ImageButton) view.findViewById(R.id.eat_but);
+        servicesBut = (ImageButton) view.findViewById(R.id.services_but);
+
+        eventsButr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "In development", Toast.LENGTH_SHORT).show();
+            }
+        });
+        whatDoBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentClass = FragmentWhaToDo.class;
+                onClickButton();
+            }
+        });
+        accomBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentClass = FragmentAccommodation.class;
+                onClickButton();
+            }
+        });
+        eatBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentClass = FragmentWhereToEat.class;
+                onClickButton();
+            }
+        });
+        servicesBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentClass = FragmentPublicService.class;
+                onClickButton();
+            }
+        });
+
+
         return view;
     }
 
-    private void setButtons(View view){
-        eventsBanner = (ImageButton) view.findViewById(R.id.events_but);
+    public void onClickButton(){
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (fragment != null) {
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            ft.replace(R.id.main_content_fragment, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
     }
 
 //    private void setBanners(View view){
