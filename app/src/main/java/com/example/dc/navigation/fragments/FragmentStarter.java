@@ -123,6 +123,9 @@ public class FragmentStarter extends AppCompatActivity
         if (id == R.id.nav_home) {
             fragmentClass = FragmentMain.class;
         }
+        else if (id == R.id.nav_about) {
+            fragmentClass = FragmentAbout.class;
+        }
         if (id == R.id.nav_what_to_do) {
             fragmentClass = FragmentWhaToDo.class;
         }
