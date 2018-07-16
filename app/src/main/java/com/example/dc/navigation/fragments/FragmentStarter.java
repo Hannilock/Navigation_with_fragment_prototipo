@@ -90,9 +90,24 @@ public class FragmentStarter extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            Class fragmentClass = FragmentConfs.class;
+//            Fragment fragment = null;
+//            try {
+//                fragment = (Fragment) fragmentClass.newInstance();
+//            } catch (InstantiationException e) {
+//                e.printStackTrace();
+//            } catch (IllegalAccessException e) {
+//                e.printStackTrace();
+//            }
+//            if (fragment != null) {
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.main_content_fragment, fragment);
+//                ft.addToBackStack(null);
+//                ft.commit();
+//            }
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

@@ -52,6 +52,6 @@ public class FragmentWhaToDo extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle(R.string.places_label);
+        getActivity().setTitle(R.string.tour_label);
     }
 }
