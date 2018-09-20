@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
-import com.example.dc.navigation.activities.EventsActivity;
 import com.example.dc.navigation.activities.PlacesActivity;
 import com.example.dc.navigation.models.Category;
 import com.example.dc.navigation.R;
@@ -45,7 +44,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.myHold
     @Override
     public void onBindViewHolder(CategoryAdapter.myHolder holder, int position) {
         holder.title.setText(categories.get(position).getName());
-        Picasso.with(context)
+        Picasso.get()
             .load(categories.get(position).getUrl())
             .into(holder.img);
     }
@@ -67,12 +66,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.myHold
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(categories.size() == 8 && title.getText().toString().equalsIgnoreCase(categories.get(7).getName())){
-                        context.startActivity(new Intent(context, EventsActivity.class));
-                    }
-                    else{
-                        context.startActivity(new Intent(context, PlacesActivity.class));
-                    }
+                    context.startActivity(new Intent(context, PlacesActivity.class));
                 }
             });
         }

@@ -21,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.EventsActivity" />
         <activity android:name=".activities.PlacesActivity" />
         <activity android:name=".activities.InfoActivity" />
     </application>

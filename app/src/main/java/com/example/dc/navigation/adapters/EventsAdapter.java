@@ -1,7 +1,6 @@
 package com.example.dc.navigation.adapters;
 
-import android.content.Context;
-import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,38 +8,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dc.navigation.activities.InfoActivity;
-import com.example.dc.navigation.models.Place;
-
-import java.util.List;
-
 import com.example.dc.navigation.R;
-/**
- * Created by Vih on 10/05/2018.
- */
+import com.example.dc.navigation.models.Event;
 
-public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.myHolder>  {
-    private List<Place> events;
-    private Context context;
+import java.util.ArrayList;
 
-    public EventsAdapter(List<Place> events, Context context) {
+public class eventsAdapter extends  RecyclerView.Adapter<eventsAdapter.myHolder> {
+    private ArrayList<Event> events;
+
+    public eventsAdapter(ArrayList<Event> events) {
         this.events = events;
-        this.context = context;
     }
 
+    @NonNull
     @Override
-    public EventsAdapter.myHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public eventsAdapter.myHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_recycler_events, parent, false);
-        EventsAdapter.myHolder holder = new EventsAdapter.myHolder(v);
-
+        eventsAdapter.myHolder holder = new eventsAdapter.myHolder(v);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(EventsAdapter.myHolder holder, int position) {
-        holder.title.setText(events.get(position).getTitle());
-        holder.date.setText(events.get(position).getSubtitle());
-        holder.img.setImageResource(events.get(position).getImage());
+    public void onBindViewHolder(@NonNull eventsAdapter.myHolder holder, int position) {
+        holder.headerImg.setImageResource(events.get(position).getImg());
+        holder.titleLabel.setText(events.get(position).getName());
+        holder.dateLabel.setText(events.get(position).getDate()+" - "+events.get(position).getPlace());
+        holder.genreLabel.setText(events.get(position).getGenre());
     }
 
     @Override
@@ -48,23 +41,16 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.myHolder> 
         return events.size();
     }
 
-    class myHolder extends RecyclerView.ViewHolder{
-        TextView title, date;
-        ImageView img;
+    public class myHolder extends RecyclerView.ViewHolder{
+        protected ImageView headerImg;
+        protected TextView titleLabel, dateLabel, genreLabel;
 
         public myHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title_label);
-            date = (TextView) itemView.findViewById(R.id.date_label);
-            img = (ImageView) itemView.findViewById(R.id.image_view);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    context.startActivity(new Intent(context, InfoActivity.class));
-                }
-            });
+            headerImg = (ImageView) itemView.findViewById(R.id.header_img);
+            titleLabel = (TextView) itemView.findViewById(R.id.title_label);
+            dateLabel = (TextView) itemView.findViewById(R.id.date_label);
+            genreLabel = (TextView) itemView.findViewById(R.id.genre_label);
         }
-
     }
 }

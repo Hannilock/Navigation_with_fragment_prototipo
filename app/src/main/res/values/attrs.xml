@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabeledImageButton">
+        <attr name="iconSrc" format="integer"/>
+        <attr name="backgroundSrc" format="string"/>
+        <attr name="title" format="string"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="cardStyle" format="reference"/>
+        <attr name="backgroundColour" format="color"/>
+    </declare-styleable>
+</resources>
